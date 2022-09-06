@@ -4,11 +4,11 @@ import re
 import nltk
 
 client = MongoClient('localhost', 27017)
-db = client['cyberbullying']
-collection = db['testCleansing']
+db = client['databaseName']
+collection = db['collectionName']
 
-dbStore = client['cyberbullying']
-collectionStore = dbStore['testCleansing']
+dbStore = client['databaseStoreName']
+collectionStore = dbStore['collectionStoreName']
 
 #stemmer
 factory = StemmerFactory()
@@ -103,28 +103,3 @@ for doc in collection_data:
     }
     print(mongo)
     collectionStore.insert_one(mongo)
-
-# tweet = ['ku', 'akan', 'membawamu', 'kembali', 'kesini', 'lagi']
-#
-# # stopwords = open('stopwords.txt', 'r').read().split()
-# # content = []
-# # filteredtext = [word for word in tweet if word not in stopwords]
-# # content.append(" ".join(filteredtext))
-# # tweet = content
-# # print(tweet)
-#
-# stopwords = []
-# stopwords_list = []
-# after_stopwords = []
-# with open('stopwords.txt', 'r') as file:
-#     for line in file:
-#         clear_line = line.replace("\n", '').strip()
-#         stopwords.append(clear_line)
-#
-#     for stopword in tweet:
-#         if stopword not in stopwords:
-#             stopwords_list.append(stopwords)
-#             after_stopwords.append(stopword)
-#
-#     filtering_word = ' '.join(after_stopwords)
-#     print(filtering_word)
