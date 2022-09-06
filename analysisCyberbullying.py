@@ -7,14 +7,14 @@ from pymongo import MongoClient
 
 
 client = MongoClient('localhost', 27017)
-db = client['cleansingCyberbullying']
-collection = db['cyberbullying6Apr']
+db = client['databaseName']
+collection = db['collectionName']
 
-dbStore = client['analysisDataNew']
-collectionStore = dbStore['cyberbullyingAnalisis']
+dbStore = client['databaseStoreName']
+collectionStore = dbStore['collectionStoreName']
 
 #Membaca Data Training
-data = pd.read_csv('dataTrain.csv', sep=',', encoding='latin-1')
+data = pd.read_csv('fileCSV.csv', sep=',', encoding='latin-1')
 
 #Model Klasifikasi
 Train_X, Test_X, Train_Y, Test_Y = model_selection.train_test_split(data['text'],data['label'],test_size=0.1)
