@@ -9,7 +9,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 
 
 #Membaca Data Training
-data = pd.read_csv('dataTrain.csv', sep=',', encoding='latin-1')
+data = pd.read_csv('fileCsv.csv', sep=',', encoding='latin-1')
 
 #Membuat Model
 Train_X, Test_X, Train_Y, Test_Y = model_selection.train_test_split(data['text'],data['label'],test_size=0.4)
