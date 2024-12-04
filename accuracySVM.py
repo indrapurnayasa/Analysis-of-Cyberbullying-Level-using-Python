@@ -29,16 +29,4 @@ print("SVM Accuracy Score = ",accuracy_score(prediction_SVM, Test_Y)*100)
 print("SVM Recall Score = ",recall_score(prediction_SVM, Test_Y)*100)
 print("SVM Precision Score = ",precision_score(prediction_SVM, Test_Y)*100)
 print("SVM f1 Score = ",f1_score(prediction_SVM, Test_Y)*100)
-# print(classification_report(y_true=Test_Y,y_pred=prediction_SVM))
-# print(confusion_matrix(y_true=Test_Y,y_pred=prediction_SVM))
-#
-# pd.set_option('display.max_rows', 500)
-# print(Test_Y)
-# labels_df = pd.DataFrame(Test_X, columns=['text'])
-# labels_df.to_csv('dataTraining/text.csv',index = False)
-# labels_df = pd.DataFrame(prediction_SVM, columns=['predicted_label'])
-# labels_df.to_csv('dataTraining/predicted.csv',index = False)
-
-# export = pd.DataFrame("text": pd.read_csv("dataTrain1000awal.csv")[text], "predicted_label":prediction_SVM)
-# pd.to_csv("export.csv",index=False)
 
