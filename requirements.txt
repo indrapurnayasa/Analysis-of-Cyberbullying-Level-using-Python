@@ -1,0 +1,4 @@
+indo-text-preprocessing>=0.1.0
+pandas
+scikit-learn
+pymongo
