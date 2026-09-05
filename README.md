@@ -10,6 +10,7 @@ yang memakai library [`indo-text-preprocessing`](https://github.com/indrapurnaya
 ├── preprocess.py            # cleaning + slang + stopwords + stemming
 ├── train.py                 # TF-IDF + LinearSVC, 5 target label
 ├── predict.py               # CLI: klasifikasi satu kalimat
+├── app.py                   # demo web (Flask): test inference di browser
 └── requirements.txt
 ```
 
@@ -30,6 +31,7 @@ pip install -r requirements.txt
 python preprocess.py            # 13k tweets ~5 detik
 python train.py                 # 5 model
 python predict.py "kata lu kasar banget bego"
+python app.py                   # demo web → http://127.0.0.1:5000
 ```
 
 ## Dataset
